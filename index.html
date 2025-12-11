@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="1만 시간의 법칙 - 전문가가 되기 위한 훈련 시간 계산기">
+    <meta name="keywords" content="1만 시간의 법칙, 전문가, 훈련, 자기계발">
+    <title>1만 시간의 법칙</title>
+    <link rel="icon" type="image/x-icon" href="./images/clock.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="status-bar" aria-hidden="true">
+        <span class="time">9:41 AM</span>
+        <div class="status-icons">
+            <img src="./images/loading.png" alt="">
+            <img src="./images/clock.png" alt="">
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header">
+            <h1 class="title">
+                <img src="./images/title.png" alt="1만 시간의 법칙">
+                <img src="./images/clock.png" alt="" class="clock-icon" aria-hidden="true">
+            </h1>
+            <p class="subtitle">
+                "연습은 어제의 당신보다 당신을 더 낫게 만든다."
+        </header>
+
+        <section class="intro-section">
+            <p class="intro-text">
+                <img src="./images/quotes.png" alt="" class="quote-left" aria-hidden="true">
+                <strong>1만 시간의 법칙</strong>은<br>
+                어떤 분야의 전문가가 되기 위해서는<br>
+                최소한 1만 시간의 훈련이 필요하다는 법칙이다.
+                <img src="./images/quotes.png" alt="" class="quote-right" aria-hidden="true">
+            </p>
+        </section>
+
+        <section class="calculator-section">
+            <form class="calculator-form">
+                <div class="input-group">
+                    <label for="field-input">
+                        나는
+                        <input 
+                            type="text" 
+                            id="field-input" 
+                            placeholder="예)프로그래밍"
+                            aria-label="목표 분야 입력"
+                        >
+                        전문가가 될 것이다.
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <label for="field-input">
+                        그래서 앞으로 매일 하루에
+                        <input 
+                            type="text" 
+                            id="field-input" 
+                            placeholder="예)5시간"
+                            aria-label="하루 훈련 시간 입력"
+                        >
+                        시간씩 훈련할 것이다.
+                    </label>
+                </div>
+
+                <button type="button" class="btn-calculate">
+                    <img src="./images/click.png" alt="" aria-hidden="true">
+                    나는 며칠 동안 훈련을 해야<br>
+                    1만 시간이 될까?
+                </button>
+            </form>
+
+            <div class="result" role="region" aria-live="polite">
+                <p class="result-text">
+                    당신은 <strong class="field-result">프로그래밍</strong> 전문가가 되기 위해서
+                </p>
+                <p class="result-numbers">
+                    대략 <strong class="days-result">5110</strong> 일 이상 훈련하셔야 합니다! :)
+                </p>
+            </div>
+        </section>
+
+        <section class="action-section">
+            <h2 class="sr-only">훈련 시작하기</h2>
+            <button type="button" class="btn-start">
+                훈련하러 가기 GO! GO!
+            </button>
+            <button type="button" class="btn-share">
+                공유하기
+            </button>
+        </section>
+
+        <footer class="footer">
+            <img src="./images/logo.png" alt="weniv" class="logo">
+            <p class="copyright">
+                본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 위니브에 있습니다.<br>
+                수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.
+            </p>
+        </footer>
+    </main>
+
+    <div class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <h2 id="modal-title" class="modal-title">화이팅!!♥♥♥</h2>
+            <p class="modal-text">당신의 꿈을 응원합니다!</p>
+            <img src="./images/licat.png" alt="라이캣 응원 캐릭터" class="modal-image">
+            <button type="button" class="btn-modal-action">
+                종료하고 진짜 훈련하러 가기 GO!GO!
+            </button>
+            <button type="button" class="btn-modal-close">
+                <span class="sr-only">모달 닫기</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

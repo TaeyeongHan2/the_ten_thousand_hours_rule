@@ -1,6 +1,34 @@
+/* 웹폰트 추가 - Gmarket Sans */
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 웹폰트 추가 - tvN 즐거운이야기체 (눈누 제공) */
+@font-face {
+    font-family: 'JoyfulStory';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+html {
+    font-size: 10px;
+}
+
 body {
-    font-family: 'GmarketSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'GmarketSans', sans-serif;
     font-size: 1.6rem;
+    font-weight: 500;
     background-color: #5B2386;
     color: #FFFFFF;
     line-height: 1.6;
@@ -81,7 +109,7 @@ input {
 }
 
 .subtitle {
-    font-family: 'OTEnjoystoriesBA';
+    font-family: 'JoyfulStory';
     font-size: 1.8rem;
     color: #F5DF4D;
     line-height: 1.4;
@@ -96,23 +124,23 @@ input {
     position: relative;
     font-size: 1.6rem;
     line-height: 1.8;
-    padding: 0 2rem;
+    padding: 3rem 2rem;
+    display: inline-block;
 }
 
 .quote-left,
 .quote-right {
     width: 2.4rem;
     height: auto;
+    position: absolute;
 }
 
 .quote-left {
-    position: absolute;
     top: 0;
     left: 0;
 }
 
 .quote-right {
-    position: absolute;
     bottom: 0;
     right: 0;
     transform: rotate(180deg);
@@ -164,6 +192,10 @@ input {
     position: relative;
     box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .btn-calculate:hover {
@@ -171,10 +203,9 @@ input {
 }
 
 .btn-calculate img {
-    position: absolute;
-    right: 1.6rem;
-    bottom: 1.2rem;
-    width: 2.4rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    flex-shrink: 0;
 }
 
 .result {
@@ -183,32 +214,42 @@ input {
 }
 
 .result-text {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
+    font-weight: 500;
     margin-bottom: 0.8rem;
 }
 
 .result-numbers {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
+    font-weight: 500;
 }
 
-.result .field-result,
-.result .days-result {
-    font-size: 2.4rem;
+.result .field-result {
+    font-size: 7.2rem;
     font-weight: 700;
     color: #FCEE21;
+    display: inline-block;
+}
+
+.result .days-result {
+    font-size: 7.2rem;
+    font-weight: 700;
+    color: #FCEE21;
+    display: inline-block;
 }
 
 .action-section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1.2rem;
     align-items: center;
+    justify-content: center;
     margin-bottom: 4rem;
 }
 
 .btn-start {
-    width: 100%;
-    max-width: 28rem;
+    width: auto;
+    min-width: 20rem;
     padding: 1.6rem 2.4rem;
     background-color: #FCEE21;
     border-radius: 2.4rem;
@@ -224,8 +265,8 @@ input {
 }
 
 .btn-share {
-    width: 100%;
-    max-width: 28rem;
+    width: auto;
+    min-width: 14rem;
     padding: 1.6rem 2.4rem;
     background-color: #FFFFFF;
     border-radius: 2.4rem;
@@ -266,8 +307,12 @@ input {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
 }
 
 .modal-content {
@@ -281,15 +326,17 @@ input {
 }
 
 .modal-title {
-    font-size: 3.2rem;
+    font-family: 'JoyfulStory';
+    font-size: 5.2rem;
     color: #5B2386;
-    margin-bottom: 1.6rem;
+    margin-bottom: 0.2rem;
 }
 
 .modal-text {
-    font-size: 1.8rem;
+    font-family: 'JoyfulStory';
+    font-size: 3.8rem;
     color: #5B2386;
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.4rem;
 }
 
 .modal-image {
@@ -322,6 +369,7 @@ input {
     content: "×";
 }
 
+/* 반응형 디자인 - 태블릿 */
 @media screen and (min-width: 576px) {
     .container {
         width: calc(100% - 6rem);
@@ -372,6 +420,7 @@ input {
     }
 }
 
+/* 반응형 디자인 - 데스크톱 */
 @media screen and (min-width: 1200px) {
     .container {
         max-width: 120rem;

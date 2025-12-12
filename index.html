@@ -23,6 +23,7 @@
             </h1>
             <p class="subtitle">
                 "연습은 어제의 당신보다 당신을 더 낫게 만든다."
+            </p>
         </header>
 
         <section class="intro-section">
@@ -51,11 +52,11 @@
                 </div>
 
                 <div class="input-group">
-                    <label for="field-input">
+                    <label for="hours-input">
                         그래서 앞으로 매일 하루에
                         <input 
                             type="text" 
-                            id="field-input" 
+                            id="hours-input" 
                             placeholder="예)5시간"
                             aria-label="하루 훈련 시간 입력"
                         >
@@ -64,9 +65,9 @@
                 </div>
 
                 <button type="button" class="btn-calculate">
-                    <img src="./images/click.png" alt="" aria-hidden="true">
                     나는 며칠 동안 훈련을 해야<br>
                     1만 시간이 될까?
+                    <img src="./images/click.png" alt="" aria-hidden="true">
                 </button>
             </form>
 
@@ -105,12 +106,41 @@
             <p class="modal-text">당신의 꿈을 응원합니다!</p>
             <img src="./images/licat.png" alt="라이캣 응원 캐릭터" class="modal-image">
             <button type="button" class="btn-modal-action">
-                종료하고 진짜 훈련하러 가기 GO!GO!
+                종료하고 진짜 </br>훈련하러 가기 GO!GO!
             </button>
             <button type="button" class="btn-modal-close">
                 <span class="sr-only">모달 닫기</span>
             </button>
         </div>
     </div>
+
+    <script>
+        // 훈련하러 가기 버튼 클릭 시 모달 열기
+        const btnStart = document.querySelector('.btn-start');
+        const modal = document.querySelector('.modal');
+        const btnModalClose = document.querySelector('.btn-modal-close');
+        const btnModalAction = document.querySelector('.btn-modal-action');
+
+        btnStart.addEventListener('click', () => {
+            modal.classList.add('active');
+        });
+
+        // 모달 닫기 버튼
+        btnModalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        // 모달 액션 버튼
+        btnModalAction.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        // 모달 배경 클릭 시 닫기
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

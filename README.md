@@ -39,9 +39,14 @@
 GitHub Pages : https://taeyeonghan2.github.io/the_ten_thousand_hours_rule/
 
 ### 로컬 스크린샷
-- 메인 화면 스크린샷 (`images/screenshot-main.png`)
-- 응원 모달 화면 스크린샷 (`images/screenshot-modal.png`)
-- 모바일 반응형 화면 스크린샷 (`images/mobile-responsive.png`)
+#### 메인
+![메인 화면](images/screenshot-main.png)
+
+#### 응원 모달
+![응원 모달](images/screenshot-modal.png)
+
+#### 모바일 반응형
+![모바일 반응형](images/mobile-responsive.jpg)
 
 ---
 

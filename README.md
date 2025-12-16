@@ -169,7 +169,6 @@ the_ten_thousand_hours_rule/
 본 프로젝트는 프론트엔드 전용 정적 웹 애플리케이션으로 **백엔드 API를 사용하지 않습니다**.
 모든 계산 로직은 클라이언트 사이드 JavaScript로 처리됩니다.
 
-TODO: 추후 기능 확장 시 API 명세 추가
 - 계산 결과 저장 기능
 - 소셜 공유 기능 구현
 - 사용자별 훈련 기록 관리
@@ -200,9 +199,6 @@ erDiagram
         datetime calculated_at
     }
 ```
-
-TODO: 백엔드 구축 시 실제 데이터 모델 설계 및 ERD 업데이트
-
 ---
 
 ## 9. Architecture
@@ -260,17 +256,17 @@ gantt
     dateFormat  YYYY-MM-DD
 
     section 개발
-    HTML 마크업 구조 작성  :done, dev1, 2025-12-11
-    모바일 반응형 CSS 스타일 구현        :done, dev2, 2025-12-11
-    웹폰트 적용            :done, dev3, 2025-12-12
-    모달 기능 구현         :done, dev3, 2025-12-12
+    HTML 마크업 구조 작성                :done, dev1, 2025-12-11, 1d
+    모바일 반응형 CSS 스타일 구현        :done, dev2, 2025-12-11, 1d
+    웹폰트 적용                          :done, dev3, 2025-12-12, 1d
+    모달 기능 구현                       :done, dev4, 2025-12-12, 1d
 
     section 테스트
-    크로스 브라우징 테스트  :test1, 2025-12-12
-    반응형 테스트          :test2, 2025-12-12
+    크로스 브라우징 테스트                :test1, 2025-12-12, 1d
+    반응형 테스트                        :test2, 2025-12-12, 1d
 
     section 배포
-    GitHub Pages 배포      :deploy1, 2025-12-16
+    GitHub Pages 배포                    :deploy1, 2025-12-16, 1d
 ```
 
 ## 11. 팀 / 역할
@@ -311,8 +307,6 @@ gantt
 ---
 
 ## 연락처
-
-TODO: 프로젝트 관리자 연락처 추가
 
 - GitHub: [TaeyeongHan2](https://github.com/TaeyeongHan2)
 - Email: dianspace53@gmail.com
